@@ -1,6 +1,13 @@
 import Link from 'next/link'
 
-export default function CarCard({ image, name, price, location }: any) {
+type CarCardProps = {
+  image: string
+  name: string
+  price: string
+  location: string
+}
+
+export default function CarCard({ image, name, price, location }: CarCardProps) {
   const slug = name.toLowerCase().replace(/\s+/g, '-')
 
   return (
