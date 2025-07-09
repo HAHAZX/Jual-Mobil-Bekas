@@ -2,11 +2,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function WhatsAppButton({ phone, text }: { phone: string; text: string }) {
+type Props = {
+  phone: string
+  text: string
+}
+
+export default function WhatsAppButton({ phone, text }: Props) {
   const encodedText = encodeURIComponent(text)
   const link = `https://api.whatsapp.com/send/?phone=6281555342614&text&type=phone_number&app_absent=0`
 
-  return (  
+  return (
     <Link
       href={link}
       target="_blank"
