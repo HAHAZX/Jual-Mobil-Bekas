@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function WhatsAppButton({ phone, text }: { phone: string; text: string }) {
   const encodedText = encodeURIComponent(text)
-  const link = `https://api.whatsapp.com/send/?phone=${phone}&text=${encodedText}`
+  const link = `https://api.whatsapp.com/send/?phone=6281555342614&text&type=phone_number&app_absent=0`
 
   return (
     <Link
