@@ -6,7 +6,7 @@ export default function WhatsAppButton({ phone, text }: { phone: string; text: s
   const encodedText = encodeURIComponent(text)
   const link = `https://api.whatsapp.com/send/?phone=6281555342614&text&type=phone_number&app_absent=0`
 
-  return (
+  return (  
     <Link
       href={link}
       target="_blank"
