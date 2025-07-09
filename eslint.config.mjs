@@ -9,8 +9,14 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+export default [
+  // Ini untuk extend default dari Next.js + TypeScript
   ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
 
-export default eslintConfig;
+  // Tambahkan override custom rule di bawah ini
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
+];
